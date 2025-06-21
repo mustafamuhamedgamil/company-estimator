@@ -1,4 +1,5 @@
 streamlit
 fpdf
+reportlab
 arabic_reshaper
 python-bidi
