@@ -1,4 +1,3 @@
-
 import streamlit as st
 from arabic_reshaper import reshape
 from bidi.algorithm import get_display
@@ -80,13 +79,18 @@ if submitted:
         notes = "اختيار مناسب للحماية القانونية والتنظيم"
         base_cost = 22000
 
+    profit = 5000
+    total_cost = base_cost + profit
+
     data = {
         "اسم الشركة": name,
         "المالك": owner,
         "الموقع": location,
         "عدد الشركاء": partners,
         "نوع الشركة المقترحة": company_type,
-        "💸 التكلفة التقديرية": f"{base_cost:,} جنيه",
+        "💸 التكلفة الأساسية": f"{base_cost:,} جنيه",
+        "💼 أتعاب يوني زون": f"{profit:,} جنيه",
+        "💰 الإجمالي": f"{total_cost:,} جنيه",
         "⏱️ المدة المتوقعة للتنفيذ": duration,
         "📌 ملاحظات": notes
     }
